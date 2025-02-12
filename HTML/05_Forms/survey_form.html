@@ -8,8 +8,10 @@
 </head>
 
 <body>
-    <main>
+    <header>
         <h1>Survey Form</h1>
+    </header>
+    <main>
         <form>
             <div>
                 <label for="fullName">Full Name: </label>
@@ -18,8 +20,8 @@
                 <input type="email" id="emailAdd" name="emailAdd">
             </div>
 
-            <div>
-                <p>How satisfied are you with our service?</p>
+            <fieldset>
+                <legend>How satisfied are you with our service?</legend>
                 <input type="radio" name="satisfaction-meter" id="very-satisfied">
                 <label for="very-satisfied">Very Satisfied</label><br>
                 <input type="radio" name="satisfaction-meter" id="satisfied">
@@ -30,27 +32,25 @@
                 <label for="dissatisfied">Dissatisfied</label><br>
                 <input type="radio" name="satisfaction-meter" id="very-dissatisfied">
                 <label for="very-dissatisfied">Very Dissatisfied</label><br>
-            </div>
+            </fieldset>
 
-            <div>
-                <p>What features do you value most?</p>
+            <fieldset>
+                <legend>What features do you value most?</legend>
                 <input type="checkbox" name="easOfUser" id="easOfUser">
                 <label for="easOfUser">Ease of Use</label><br>
                 <input type="checkbox" name="design" id="design">
                 <label for="design">Design</label><br>
                 <input type="checkbox" name="customerSupport" id="customerSupport">
                 <label for="customerSupport">Customer Support</label><br>
-            </div>
+            </fieldset>
 
-            <div>
-                <label for="describeYou">What best describe you?</label>
-                <select name="describeYou" id="describeYou">
-                    <option value="Student">Student</option>
-                    <option value="Professional">Professional</option>
-                    <option value="Hobbyist">Hobbyist</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
+            <label for="describeYou">What best describe you?</label>
+            <select name="describeYou" id="describeYou">
+                <option value="Student">Student</option>
+                <option value="Professional">Professional</option>
+                <option value="Hobbyist">Hobbyist</option>
+                <option value="Other">Other</option>
+            </select>
 
             <div>
                 <label for="addtionalFeedback">Additional Feedback: </label><br>

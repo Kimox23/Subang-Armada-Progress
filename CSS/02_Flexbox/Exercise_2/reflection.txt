@@ -1,0 +1,3 @@
+Well eventually this took me atleast 40mins-1hour what is the best approach in using flexbox.
+The code is already given but made an adjustment on it to have a replecation on it about the given output style.
+I add width to the left panel section to ensure all the children have the same width and i also add a width in the body tag for better output replication

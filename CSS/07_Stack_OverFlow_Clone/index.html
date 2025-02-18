@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Overflow - Clone</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="header-container border-bottom py-4 position-fixed width-full">
+        <div class="header-wrapper flex align-center gap-1">
+            <a href="https://stackoverflow.com"><img src="assets/icon/logo-stackoverflow.svg" alt="Stack Overflow"></a>
+            <ul class="navigation">
+                <li class="inline-block"><a href="#" class="text-decoration-none text-dark px-1 text-sm">About</a></li>
+                <li class="inline-block"><a href="#" class="text-decoration-none text-dark px-1 text-sm">Products</a>
+                </li>
+                <li class="inline-block"><a href="#" class="text-decoration-none text-dark px-1 text-sm">OverflowAI</a>
+                </li>
+            </ul>
+            <form class="flex-1">
+                <input type="text" name="search" placeholder="Search" class="width-full px-2 py-2 radius border-gray">
+            </form>
+            <a href="#" class="btn text-decoration-none bg-none text-blue border-blue">Log in</a>
+            <a href="#" class="btn text-decoration-none btn-primary">Sign up</a>
+        </div>
+    </header>
+    <main>
+        <aside class="sidebar border-right position-fixed">
+            <ul class="sidebar-spaces">
+                <li class="list-style-none py-1">
+                    <a href="#" class="flex align-center text-decoration-none text-secondary text-sm active"><img
+                            class="pr-1" src="assets/icon/home.png" alt="Home">Home</a>
+                </li>
+                <li class="list-style-none py-1">
+                    <a href="#" class="flex align-center text-decoration-none text-secondary text-sm"><img class="pr-1"
+                            src="assets/icon/questions.png" alt="Questions">Questions
+                    </a>
+                </li>
+                <li class="list-style-none py-1"><a href="#"
+                        class="flex align-center text-decoration-none text-secondary text-sm"><img class="pr-1"
+                            src="assets/icon/tags.png" alt="Tags">Tags</a></li>
+            </ul>
+            <ul class="sidebar-spaces">
+                <li class="list-style-none py-1"><a href="#"
+                        class="flex align-center text-decoration-none text-secondary text-sm"><img class="pr-1"
+                            src="assets/icon/users.png" alt="Users">Users</a></li>
+                <li class="list-style-none py-1"><a href="#"
+                        class="flex align-center text-decoration-none text-secondary text-sm"><img class="pr-1"
+                            src="assets/icon/companies.png" alt="Companies">Companies</a></li>
+            </ul>
+            <div class="sidebar-spaces">
+                <p class="text-bold uppercase text-sm">Labs</p>
+                <ul>
+                    <li class="list-style-none py-1"><a href="#"
+                            class="flex align-center text-decoration-none text-secondary text-sm"><img class="pr-1"
+                                src="assets/icon/discussions.png" alt="Discussions">Discussions</a></li>
+                </ul>
+            </div>
+        </aside>
+        <section class="main-content gap-1">
+            <section class="hero-page radius-2">
+                <span class="background-text position-absolute"><img src="assets/img/background-image.png"
+                        alt="Word Background Image"></span>
+                <div class="card mx-4 py-4 position-absolute">
+                    <h1>Every <span class="text-white" style="padding: 0px 10px;">developer</span> has a tab open to
+                        Stack Overflow.</h1>
+                    <p>For over 15 years we've been the Q&A platform of choice that millions of people visit every
+                        month
+                        to
+                        ask questions, learn, and share technical knowledge.</p>
+                    <form class="inline pr-2">
+                        <input type="submit" class="btn btn-primary border-none text-sm" name="signUp" value="Sign up">
+                    </form>
+                    <a href="#" class="text-decoration-none">Visit the community</a>
+                </div>
+                <img src=" assets/img/illo-home-hero.png" class="hero-page-image" alt="Stack Overflow Hero" width="40%">
+            </section>
+            <h3 class="text-lighter my-4">Services for companies of all shapes & sizes</h3>
+            <section class="container-sm border-gray radius-2 position-relative">
+                <div class="card mx-4 py-4 position-absolute">
+                    <img src="assets/icon/logo-stackoverflow.svg" alt="Stack Overflow" width="25%">
+                    <p>Where developers and technologists share private knowledge with coworkers.</p>
+                    <form class="inline pr-2">
+                        <input type="submit" class="btn btn-primary border-none text-sm" name="exploreTeam"
+                            value="Explore Teams">
+                    </form>
+                    <a href="#">Try for free</a>
+                </div>
+                <img src="assets/img/home-teams.png" class="over-flow-team z-index-negative" alt="Overflow Team">
+            </section>
+
+            <section class="container-sm border-gray radius-2 position-relative bg-semi-dark my-2">
+                <div class="card mx-4 py-4 position-absolute text-white">
+                    <img src="assets/icon/logo-stackoverflow.svg" alt="Stack Overflow" width="25%">
+                    <p>Now available! A suite of GenAI tools for Stack Overflow for Teams that helps connect
+                        employees
+                        to
+                        knowledge faster.</p>
+                    <form class="inline pr-2">
+                        <input type="submit" class="btn btn-primary border-none bg-orange text-sm" name="overflowAI"
+                            value="Supercharge your Team >">
+                    </form>
+                </div>
+                <img src="assets/img/home-overflowai.png" class="over-flow-team radius-end-end" alt="OverflowAI">
+            </section>
+            <section class="my-2 flex gap-2 height-sm">
+                <div class="card border-gray radius-2 my-2 p flex-1 custom-padding">
+                    <img src="assets/icon/logo-stackoverflow.svg" alt="Stack Overflow" width="25%">
+                    <p>Reach the world's largest audience of developers and technologies.</p>
+                    <form class="inline pr-2">
+                        <input type="submit" class="btn btn-primary border-none text-sm" value="Advertising solutions">
+                    </form>
+                    <a href="#">Build your employer brand</a>
+                </div>
+                <div class="card border-gray radius-2 my-2 flex-1 custom-padding">
+                    <img src="assets/icon/logo-stackoverflow.svg" alt="Stack Overflow" width="25%">
+                    <p>A subscription-based API service that provides continuous access to Stack Overflow's public
+                        dataset to train and fine-tune large language models.</p>
+                    <form>
+                        <input type="submit" class="btn btn-primary border-none text-sm"
+                            value="API solutions for business">
+                    </form>
+                </div>
+            </section>
+            <h3 class="text-lighter my-4">Work here</h3>
+            <section class="workhere-section container-sm border-gray radius-2 position-relative mb-4">
+                <div class="card mx-4 py-4 position-absolute">
+                    <img src="assets/icon/logo-stackoverflow.svg" alt="Stack Overflow" width="25%">
+                    <p>Join our mission to help empower the world to develop technology through collective knowledge</p>
+                    <form>
+                        <input type="submit" class="btn btn-primary border-none text-sm"
+                            value="Careers at Stack Overflow">
+                    </form>
+                </div>
+                <img src="assets/img/illo-home-careers.png" class="over-flow-team" alt="Stack Overflow Careers">
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>

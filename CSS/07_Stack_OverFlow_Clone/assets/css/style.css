@@ -1,0 +1,373 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+section>img {
+    width: 40%;
+}
+
+main {
+    width: 1500px;
+    margin: 0px auto;
+    position: relative;
+    z-index: -1;
+}
+
+li a {
+    padding-left: 10px;
+}
+
+li a:hover {
+    border-radius: 50px 0px 0px 50px;
+    background-color: #F1F2F3;
+}
+
+.active {
+    border-radius: 50px 0px 0px 50px;
+    background-color: #F1F2F3;
+}
+
+.container-sm {
+    width: auto;
+    height: 250px;
+}
+
+.hero-page {
+    position: relative;
+    background-color: #F9FAFA;
+    width: auto;
+    height: 400px;
+}
+
+.hero-page-image {
+    position: absolute;
+    bottom: 0px;
+    right: 5%;
+}
+
+.over-flow-team {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.header-container {
+    background-color: white;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.align-content-center {
+    align-content: center;
+}
+
+.background-text {
+    top: 19%;
+    left: 203px;
+
+}
+
+.sidebar {
+    height: 100%;
+    width: 150px;
+    top: 80px;
+    background-color: white;
+    border-top: 1px solid #D6D9DC;
+}
+
+.sidebar-spaces {
+    padding-top: 20px;
+}
+
+.header-wrapper {
+    width: 1500px;
+    margin: 0px auto;
+}
+
+.card {
+    width: 580px;
+    top: 14%;
+    left: 5%;
+}
+
+.card h1 {
+    font-size: 40px;
+}
+
+.card p {
+    font-size: 20px;
+    padding: 20px 0px;
+}
+
+.height-sm {
+    height: 280px;
+}
+
+.header-wrapper img {
+    width: 150px;
+}
+
+.workhere-section>img {
+    width: 48%;
+}
+
+/* .min-height-full {
+    height: 100vh;
+} */
+
+.main-content {
+    margin-top: 5.5%;
+    margin-left: 20px;
+    position: absolute;
+    top: 9%;
+    left: 10%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.z-index-negative {
+    z-index: -1;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.border-blue {
+    border: 1px solid #155CA2;
+}
+
+.border-gray {
+    border: 1px solid #D6D9DC;
+}
+
+.border-none {
+    border: none;
+}
+
+.btn {
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #155CA2;
+    color: white;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #D6D9DC;
+}
+
+.radius-end-end {
+    border-end-end-radius: 10px;
+}
+
+.border-right {
+    border-right: 1px solid #D6D9DC;
+}
+
+.bg-none {
+    background-color: none;
+}
+
+.bg-semi-dark {
+    background-color: #3B4045;
+}
+
+.bg-orange {
+    background-color: #E7700D;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.list-style-none {
+    list-style-type: none;
+}
+
+.text-gray {
+    color: #D6D9DC;
+}
+
+.text-dark {
+    color: #0C0D0E;
+}
+
+.custom-padding {
+    padding: 3.7rem;
+}
+
+.text-secondary {
+    color: #0C0D0E;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-blue {
+    color: #155CA2;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-lighter {
+    font-weight: lighter;
+}
+
+.text-sm {
+    font-size: small;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.height-full {
+    height: 100%;
+}
+
+.width-full {
+    width: 100%;
+}
+
+.radius {
+    border-radius: 5px;
+}
+
+.radius-2 {
+    border-radius: 10px;
+}
+
+.pr-1 {
+    padding-right: 5px;
+}
+
+.pr-2 {
+    padding-right: 10px;
+}
+
+.p-1 {
+    padding: 10px;
+}
+
+.p-2 {
+    padding: 20px;
+}
+
+.px-1 {
+    padding: 0px 5px;
+}
+
+.px-2 {
+    padding: 0px 10px;
+}
+
+.px-3 {
+    padding: 0px 15px;
+}
+
+.px-4 {
+    padding: 0px 20px;
+}
+
+.py-1 {
+    padding: 5px 0px;
+}
+
+.py-2 {
+    padding: 10px 0px;
+}
+
+.py-3 {
+    padding: 15px 0px;
+}
+
+.py-4 {
+    padding: 20px 0px;
+}
+
+.mx-1 {
+    margin: 0px 5px;
+}
+
+.mx-2 {
+    margin: 0px 10px;
+}
+
+.mx-3 {
+    margin: 0px 15px;
+}
+
+.mx-4 {
+    margin: 0px 20px;
+}
+
+.my-1 {
+    margin: 5px 0px;
+}
+
+.my-2 {
+    margin: 10px 0px;
+}
+
+.my-3 {
+    margin: 15px 0px;
+}
+
+.my-4 {
+    margin: 20px 0px;
+}
+
+.mb-4 {
+    margin-bottom: 8rem;
+}
+
+.gap-1 {
+    gap: 10px;
+}
+
+.gap-2 {
+    gap: 20px;
+}

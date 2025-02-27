@@ -32,13 +32,16 @@ function startFight(warriors, delay) {
   let current = 0;
   function delayFight() {
     if (current < 10) {
+      let warriorAttack1 = randomAttack(warriors[0].strength);
+      let warriorAttack2 = randomAttack(warriors[1].strength);
       console.log("=== ROUND " + (current + 1) + " ===");
+      warriors[0].health -= warriorAttack2;
       console.log(
         warriors[1].name +
           " attacks " +
           warriors[0].name +
           " and does " +
-          (warriors[0].health -= randomAttack(warriors[1].strength)) +
+          warriorAttack2 +
           " damage!\n" +
           warriors[1].name +
           " HP: " +
@@ -49,20 +52,21 @@ function startFight(warriors, delay) {
           warriors[0].health +
           "\n"
       );
+      warriors[1].health -= warriorAttack1;
       console.log(
         warriors[0].name +
           " attacks " +
           warriors[1].name +
           " and does " +
-          (warriors[1].health -= randomAttack(warriors[0].strength)) +
+          warriorAttack1 +
           " damage!\n" +
-          warriors[0].name +
-          " HP: " +
-          warriors[0].health +
-          " | " +
           warriors[1].name +
           " HP: " +
           warriors[1].health +
+          " | " +
+          warriors[0].name +
+          " HP: " +
+          warriors[0].health +
           "\n"
       );
       current++;

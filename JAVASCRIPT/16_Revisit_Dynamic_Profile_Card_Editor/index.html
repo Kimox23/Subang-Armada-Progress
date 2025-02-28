@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Dynamic Profile Card Editor</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="card" id="card">
+        <section>
+          <img
+            src="https://img.freepik.com/free-photo/raw-garganelli-pasta-with-halved-tomatoes-basil-corner-black-textured-backdrop_23-2148090992.jpg?t=st=1740713758~exp=1740717358~hmac=75a0e6687fb7d28dd51f63d60d52c67c98f85b8f8ebfa7e4ca0cb9b4ac76012c&w=740"
+            alt="Profile Picture"
+          />
+        </section>
+        <section>
+          <h3 id="name">Kim Su</h3>
+          <p>Lorem ipsum dolor sit amet consectetur</p>
+        </section>
+      </div>
+      <form>
+        <label for="name"> Name: </label>
+        <input name="name" type="text" />
+        <label for="bio"> Bio: </label>
+        <input name="bio" type="text" />
+        <label for="photo"> Image </label>
+        <input name="photo" type="text" />
+        <label for="color"> Background Color </label>
+        <input name="color" type="color" />
+        <input type="submit" value="Update Profile" onclick="updateProfile()" />
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

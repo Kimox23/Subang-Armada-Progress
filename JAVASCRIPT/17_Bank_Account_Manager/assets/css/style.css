@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    max-width: 50em;
+    margin: 1em auto;
+
+    section {
+        background-color: bisque;
+        padding: 1em;
+        border-radius: 0.5em;
+    }
+}
+
+h1 {
+    margin: 1em 0;
+}
+
+.moneyBalance, .moneyBalance div {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0;
+
+    div {
+        gap: 0;
+    }
+}
+
+form {
+    margin-top: 0.5em;
+    display: flex;
+    text-align: center;
+    gap: 0.3em;
+    input[type="number"]{
+        width: 80%;
+        padding: 0.5em;
+        display: block;
+    }
+
+    input[type="submit"]{
+
+        width: 20%;
+        display: inline-block;
+    }
+}
+
+.notification {
+    background-color: green;
+    color: white;
+    width: 40%;
+    margin: 0.5em auto;
+    padding: 0.5em;
+    border-radius: .5em;
+}

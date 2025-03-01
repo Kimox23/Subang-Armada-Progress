@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Selector</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        transition: background-color 0.5s ease;
+      }
+      #container {
+        width: 300px;
+        height: 200px;
+        background-color: lightgray;
+        margin: 50px auto;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.5s ease;
+      }
+      .color-box {
+        width: 100px;
+        height: 40px;
+        margin: 5px;
+        border: none;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .red {
+        background-color: red;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .green {
+        background-color: green;
+      }
+      .orange {
+        background-color: orange;
+      }
+      .violet {
+        background-color: violet;
+      }
+      .cyan {
+        background-color: cyan;
+        color: rgb(60, 47, 47);
+      }
+      .selected {
+        border: 2px solid yellow;
+        transition: 0.4s ease;
+      }
+      p:nth-child(4) {
+        font-weight: bold;
+        transition: 1s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Color Selector</h1>
+    <p>Click a color to change the background. highlight the selected color</p>
+    <div id="container">
+      <button class="color-box red">Red</button>
+      <button class="color-box blue">Blue</button>
+      <button class="color-box green">Green</button>
+      <button class="color-box orange">Orange</button>
+      <button class="color-box violet">Violet</button>
+      <button class="color-box cyan">Cyan</button>
+    </div>
+    <p>Selected Color: None</p>
+
+    <script>
+      document
+        .getElementById("container")
+        .addEventListener("click", function () {
+          this.style.backgroundColor = "yellow";
+        });
+
+      document.querySelectorAll(".color-box").forEach((button) => {
+        button.addEventListener("click", function (event) {
+          event.stopPropagation(); // Uncomment this to see the difference
+
+          document.querySelectorAll(".color-box").forEach((btn) => {
+            btn.classList.remove("selected");
+          });
+
+          document.body.style.backgroundColor =
+            window.getComputedStyle(this).backgroundColor;
+          document.getElementById("container").style.backgroundColor =
+            window.getComputedStyle(this).backgroundColor;
+
+          document.querySelector("p:nth-child(4)").innerText =
+            "Selected Color: " + this.innerText;
+
+          document.body.style.color = window.getComputedStyle(this).color;
+          this.classList.add("selected");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -11,7 +11,8 @@ main{
 
     img,button{
         max-width: 20%;
-        margin: 0 auto;
-        transition: opacity 1s ease;
+        margin: 1em auto;
+        transition: ease,scale 0.3s ease;
+        cursor: pointer;
     };
 }

@@ -24,7 +24,7 @@ function filter(arr, callback) {
   return filteredArr;
 }
 
-let result = filter([1, , 17, 2, 3, 4, 15], function (val) {
+let result = filter([1, 2, 3, 4, 15], function (val) {
   return val > 10;
 });
 console.log(result); // Should output: [1,2,3,4]

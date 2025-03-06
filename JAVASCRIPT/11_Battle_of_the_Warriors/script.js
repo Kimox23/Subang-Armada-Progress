@@ -1,4 +1,4 @@
-/* Array of warriors with their initial attributes */
+/* Array of warriors objects with their initial attributes */
 let warriors = [
   {
     name: "Zeus",

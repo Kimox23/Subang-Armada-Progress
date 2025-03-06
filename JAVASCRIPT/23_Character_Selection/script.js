@@ -1,6 +1,8 @@
+/* Getting the element in the html */
 const characterSelection = document.querySelector("ul");
 let characterPreview = document.getElementById("character-preview");
 
+/* Array of objects Greek mythology characters with their details or properties */
 const greekMythologyCharacters = [
   {
     name: "Zeus",
@@ -92,32 +94,38 @@ const greekMythologyCharacters = [
   },
 ];
 
-console.log(greekMythologyCharacters);
-
+/* Loop through each character in the array to create and display them */
 for (let x = 0; x < greekMythologyCharacters.length; x++) {
+  /* This section create an element for the character */
   const character = document.createElement("li");
   const img = document.createElement("img");
+
+  /* If the character has the 'active' property, add the 'selected' class to the list item */
   if (greekMythologyCharacters[x].active) {
     character.classList = greekMythologyCharacters[x].active;
   }
+
+  /* Set the image source and alt text from the character data */
   img.src = greekMythologyCharacters[x].src;
   img.alt = greekMythologyCharacters[x].alt;
   character.appendChild(img);
-  if (character.className) {
-    characterPreview.children[0].children[0].src =
-      greekMythologyCharacters[x].src;
-    characterPreview.children[1].innerHTML = greekMythologyCharacters[x].name;
-    characterPreview.children[2].innerHTML =
-      "Description: " + greekMythologyCharacters[x].description;
-    characterPreview.children[3].innerHTML =
-      "Special Ability: " + greekMythologyCharacters[x].specialAbility;
-    characterPreview.children[4].innerHTML =
-      "HP: " + greekMythologyCharacters[x].hp;
-    characterPreview.children[5].innerHTML =
-      "Strengh: " + greekMythologyCharacters[x].strength;
-  }
+
+  /* In these section are setting up the values of characterPreview children elements*/
+  characterPreview.children[0].children[0].src =
+    greekMythologyCharacters[x].src;
+  characterPreview.children[1].innerHTML = greekMythologyCharacters[x].name;
+  characterPreview.children[2].innerHTML =
+    "Description: " + greekMythologyCharacters[x].description;
+  characterPreview.children[3].innerHTML =
+    "Special Ability: " + greekMythologyCharacters[x].specialAbility;
+  characterPreview.children[4].innerHTML =
+    "HP: " + greekMythologyCharacters[x].hp;
+  characterPreview.children[5].innerHTML =
+    "Strengh: " + greekMythologyCharacters[x].strength;
+
   characterSelection.appendChild(character);
 
+  /* This section add a click event listener to the list item created */
   character.addEventListener("click", function () {
     for (let x = 0; x < greekMythologyCharacters.length; x++) {
       if (characterSelection.children[x].className) {
@@ -126,6 +134,7 @@ for (let x = 0; x < greekMythologyCharacters.length; x++) {
     }
     character.classList = "selected";
 
+    /* This section update the preview elements with the character details */
     characterPreview.children[0].children[0].src =
       greekMythologyCharacters[x].src;
     characterPreview.children[1].innerHTML = greekMythologyCharacters[x].name;

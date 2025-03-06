@@ -1,6 +1,8 @@
+/* Getting the element in the html */
 const characterPrev = document.getElementById("character-preview");
 const armorSelection = document.getElementById("character-selection");
 
+/* Creating an object default character */
 const character = {
   helmet: "assets/img/Arctic_Hood.png",
   armor: "assets/img/Arctic_Jacket.png",
@@ -9,6 +11,7 @@ const character = {
   nameSet: ["Arctic Hood, Arctic Jacket, Arctic Leggings, Arctic Boots"],
 };
 
+/* Creating an array of objects armor sets  */
 const armorClothes = [
   {
     helmet: "assets/img/Fiery_Helmet.png",
@@ -53,50 +56,11 @@ const armorClothes = [
   },
 ];
 
-function characterCreation(callback, secondCallBack) {
-  characterPrev.innerHTML = "";
-  const createButton = document.createElement("button");
-  const helmet = document.createElement("img");
-  const armor = document.createElement("img");
-  const leggings = document.createElement("img");
-  const boots = document.createElement("img");
-
-  helmet.src = character.helmet;
-  armor.src = character.armor;
-  leggings.src = character.leggings;
-  boots.src = character.boots;
-  createButton.innerText = "Create Character";
-
-  characterPrev.appendChild(helmet);
-  characterPrev.appendChild(armor);
-  characterPrev.appendChild(leggings);
-  characterPrev.appendChild(boots);
-
-  document.querySelector("main").appendChild(createButton);
-
-  if (callback) {
-    callback();
-    secondCallBack();
-  }
-
-  createButton.addEventListener("click", function () {
-    const splitName = character.nameSet;
-    const defaultName = splitName.toString().split(", ");
-    const chosenHelmet = helmet.alt ? helmet.alt : defaultName[0];
-    const chosenArmor = armor.alt ? armor.alt : defaultName[1];
-    const chosenLeggings = leggings.alt ? leggings.alt : defaultName[2];
-    const chosenBoots = boots.alt ? boots.alt : defaultName[3];
-    alert(
-      `Character Created!! \nDetails:\n Helmet: ${chosenHelmet}\n Armor: ${chosenArmor}\n Leggings: ${chosenLeggings}\n Boots: ${chosenBoots}`
-    );
-  });
-}
-
 function characterSelection() {
-  if (!armorSelection) return;
-
+  /* Create a <ul> element to hold the armor sets */
   const createUl = document.createElement("ul");
 
+  /* Loop through each armor set and create a list item for it */
   armorClothes.forEach((armorSet) => {
     const createLi = document.createElement("li");
     const helmetImg = document.createElement("img");
@@ -104,6 +68,7 @@ function characterSelection() {
     const armorImg = document.createElement("img");
     const leggingsImg = document.createElement("img");
 
+    /* Set the source for each armor piece in the set */
     helmetImg.src = armorSet.helmet;
     armorImg.src = armorSet.armor;
     leggingsImg.src = armorSet.leggings;
@@ -114,31 +79,88 @@ function characterSelection() {
     createLi.appendChild(leggingsImg);
     createLi.appendChild(bootsImg);
 
+    /* Append the list item to the <ul> */
     createUl.appendChild(createLi);
   });
   armorSelection.appendChild(createUl);
 }
 
+/* Function to add click event listeners to the armor selection images */
 function addEventCharacterSelect() {
+  /* Loop through each list item in the armor selection */
   for (let x in armorSelection.children[0].children) {
+    /* Loop through each image in the list item */
     for (
       let y = 0;
       y < armorSelection.children[0].children[x].childElementCount;
       y++
     ) {
+      /* Add a click event listener to each image */
       armorSelection.children[0].children[x].children[y].addEventListener(
         "click",
         function () {
+          /*  Get the armor names for the clicked set */
           const splitName = armorClothes[x].nameSet;
           const name = splitName.toString().split(", ");
           const tempSrc = characterPrev.children[y].src;
+
+          /* Update the character preview with the clicked armor piece */
           characterPrev.children[y].src = this.src;
           characterPrev.children[y].alt = name[y];
-          characterPrev.children[y].dataset.dataPart = tempSrc;
+          characterPrev.children[y].dataset.dataPart = tempSrc; // Store the old source in a data attribute
         }
       );
     }
   }
+}
+
+/* Function to create the character preview and handle character creation */
+function characterCreation(callback, secondCallBack) {
+  characterPrev.innerHTML = "";
+  /*  Create elements for the character's armor and a button to finalize the character */
+  const createButton = document.createElement("button");
+  const helmet = document.createElement("img");
+  const armor = document.createElement("img");
+  const leggings = document.createElement("img");
+  const boots = document.createElement("img");
+
+  /* Set the source for each armor piece using the default character data */
+  helmet.src = character.helmet;
+  armor.src = character.armor;
+  leggings.src = character.leggings;
+  boots.src = character.boots;
+
+  /* Set the button text */
+  createButton.innerText = "Create Character";
+
+  /* Append the armor images and button to the DOM */
+  characterPrev.appendChild(helmet);
+  characterPrev.appendChild(armor);
+  characterPrev.appendChild(leggings);
+  characterPrev.appendChild(boots);
+
+  document.querySelector("main").appendChild(createButton);
+
+  callback();
+  secondCallBack();
+
+  /* Add a click event listener to the "Create Character" button */
+  createButton.addEventListener("click", function () {
+    /* Split the default armor names into an array*/
+    const splitName = character.nameSet;
+    const defaultName = splitName.toString().split(", ");
+
+    /* Determine the chosen armor names */
+    const chosenHelmet = helmet.alt ? helmet.alt : defaultName[0];
+    const chosenArmor = armor.alt ? armor.alt : defaultName[1];
+    const chosenLeggings = leggings.alt ? leggings.alt : defaultName[2];
+    const chosenBoots = boots.alt ? boots.alt : defaultName[3];
+
+    /* Display an alert with the character's armor details */
+    alert(
+      `Character Created!! \nDetails:\n Helmet: ${chosenHelmet}\n Armor: ${chosenArmor}\n Leggings: ${chosenLeggings}\n Boots: ${chosenBoots}`
+    );
+  });
 }
 
 characterCreation(characterSelection, addEventCharacterSelect);

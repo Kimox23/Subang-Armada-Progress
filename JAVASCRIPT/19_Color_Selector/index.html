@@ -64,24 +64,6 @@
       <button class="color-box cyan">Cyan</button>
     </div>
 
-    <script>
-      document
-        .getElementById("container")
-        .addEventListener("click", function () {
-          alert("You clicked the container!");
-
-          // "this" refers to the element that triggered the event (in this case, 				#container)
-          this.style.backgroundColor = "yellow";
-        });
-
-      document.querySelectorAll(".color-box").forEach((button) => {
-        button.addEventListener("click", function (event) {
-          event.stopPropagation(); // Uncomment this to see the difference
-          document.getElementById("container").style.backgroundColor =
-            this.style.backgroundColor;
-          alert("You clicked the " + this.textContent + " button!");
-        });
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

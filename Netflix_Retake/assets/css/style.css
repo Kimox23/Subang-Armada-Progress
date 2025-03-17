@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+    /* outline: 1px solid red; */
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                  url("/Netflix_Retake/assets/img/PH-en-small.jpg");
+    object-fit: cover;
+}
+
+h1, h3, p {
+    color: #FDFDFD;
+    margin: 0.5em 0;
+}
+
+h3 {
+    padding: 1em 0;
+}
+
+h1 {
+    font-size:4rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: red;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+header, main div section, section {
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+header {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    
+    img {
+        width: 10%;
+    }
+
+    div {
+        display: flex;
+        max-width: 100%;
+        align-items: center;
+        gap: 1em;
+        height: 2em;
+        justify-content: flex-end;
+    }
+
+    form, a, select {
+    min-width: 5em;
+    align-content: center;
+    text-align: center;
+    padding: 0.3em;
+    border-radius: 0.3em;
+    font-weight: bold;
+    color: white;
+    }
+    
+    select {
+        background:none;
+        outline: none;
+    }
+}
+
+main {
+    height: 100vh;
+
+    .hero-section{
+        width: 40%;
+        min-width: 40%;
+        margin: 0 auto;
+        height: 100vh;
+        text-align: center;
+        align-content: center;
+    }
+
+    p:nth-child(2){
+        margin: 1em 0;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    ul{
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        list-style: none;
+    }
+
+    form {
+        display: flex;
+        gap: 0.5em;
+        width: 100%;
+        height: 3em;
+    }
+    
+    input[type="text"] {
+        width: 70%;
+        height: auto;
+        border-radius: 0.3em;
+        padding: 0 1em;
+        font-weight: bold;
+        border: 1px solid #5E5E5E;
+        background: none;
+    }
+    input[type="submit"]{
+        width: 30%;
+        height: auto;
+        border-radius: 0.3em;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        background-color: red;
+        border: none;
+    }
+
+    div{
+        background-color: black;
+    }
+
+    .trending-section li {
+        margin-bottom: 4em;
+    }
+
+    .reason-to-join-section {
+        li {
+            width: 25%;
+            height: 16em;
+            padding: 1.3em;
+            background: linear-gradient(158deg, rgba(20, 43, 83, 1) 0%, rgba(26, 74, 136, 1) 85%);
+            border-radius: 1em;
+        }
+        h3 {
+            margin-bottom: 1em;
+        }
+
+        p{
+            font-weight: normal;
+        }
+    }
+
+    section:last-child {
+        margin: 4em auto;
+
+        padding: 7em auto;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    h1{
+        font-size: 2.5rem;
+    }
+
+    header {
+        width: 95%;
+
+
+        img {
+            width: 15%;
+        }
+    }
+
+    main{
+        .hero-section {
+            width: 95%;
+        }
+    
+        .reason-to-join-section ul {
+            flex-direction: column;
+            margin: 0 1em;
+    
+            li {
+                width: 95%;
+            }
+        }
+
+        section:last-child{
+            width: 95%;
+        }
+    }
+}
+
+@media (max-width: 480px){
+    h1{
+        font-size: 1.8rem;
+    }
+
+    header {
+        
+        img {
+            width: 25%;
+        }
+
+        div{
+            display: none;
+        }
+    }
+
+    main{
+        .hero-section {
+            width: 95%;
+        }
+    
+        .reason-to-join-section ul {
+            flex-direction: column;
+            margin: 0 1em;
+            
+            li {
+                width: 95%;
+            }
+        }
+
+        section:last-child{
+            width: 95%;
+        }
+
+        input[type="submit"]{
+            font-size: 1rem;
+        }
+    }
+}
+

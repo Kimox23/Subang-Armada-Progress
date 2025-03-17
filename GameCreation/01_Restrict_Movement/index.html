@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pacman Demo</title>
+</head>
+
+<body>
+    <!-- The background of the game -->
+    <div id="background">
+        <!-- The character element which will be moved -->
+        <div id="character"
+            style='position: absolute; top: 200px; left: 450px; background-image: url("assets/img/ghost-left1.webp"); height: 100px; width: 100px;'>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Initial position of the character
+        var leftValue = 450,
+            topValue = 200;
+
+        // Function to move the character
+        function moveGhost() {
+            // Update the position of the character based on new values
+            document.getElementById("character").style.left = leftValue + "px";
+            document.getElementById("character").style.top = topValue + "px";
+        }
+
+        // Event listener to capture keyboard input
+        document.onkeydown = function (e) {
+            // Log the key code in the console to see which key is pressed
+            console.log("Key pressed: " + e.keyCode);
+
+            // Check which key was pressed
+            if (e.keyCode == 37 && leftValue > 0) { // Left arrow
+                leftValue -= 10; // Move the ghost left
+            } else if (e.keyCode == 39 && leftValue < 500) { // Right arrow
+                leftValue += 10; // Move the ghost right
+            } else if (e.keyCode == 40 && topValue < 500) { // Down arrow
+                topValue += 10; // Move the ghost down
+            } else if (e.keyCode == 38 && topValue > 0) {
+                topValue -= 10;
+            }
+
+            // Call the function to move the ghost
+            moveGhost()
+        };
+    </script>
+</body>
+
+</html>
